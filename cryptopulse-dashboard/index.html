@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CryptoPulse | Real-Time Crypto Analytics</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+<body>
+    <div class="glass-bg"></div>
+    <div class="container">
+        <header>
+            <div class="logo">
+                <i data-lucide="zap"></i>
+                <h1>Crypto<span>Pulse</span></h1>
+            </div>
+            <div class="market-cap glass">
+                <span>Global Market Cap</span>
+                <strong id="global-cap">$2.45T</strong>
+            </div>
+        </header>
+
+        <main class="dashboard">
+            <div class="card glass animate-in">
+                <div class="card-header">
+                    <i data-lucide="trending-up" class="btc-icon"></i>
+                    <h3>Bitcoin</h3>
+                    <span class="tag">BTC</span>
+                </div>
+                <div class="price" id="btc-price">$64,120.45</div>
+                <div class="change up">+2.4%</div>
+            </div>
+
+            <div class="card glass animate-in" style="animation-delay: 0.1s">
+                <div class="card-header">
+                    <i data-lucide="layers" class="eth-icon"></i>
+                    <h3>Ethereum</h3>
+                    <span class="tag">ETH</span>
+                </div>
+                <div class="price" id="eth-price">$3,450.12</div>
+                <div class="change up">+1.8%</div>
+            </div>
+
+            <div class="card glass animate-in" style="animation-delay: 0.2s">
+                <div class="card-header">
+                    <i data-lucide="coins" class="sol-icon"></i>
+                    <h3>Solana</h3>
+                    <span class="tag">SOL</span>
+                </div>
+                <div class="price" id="sol-price">$145.67</div>
+                <div class="change down">-0.5%</div>
+            </div>
+        </main>
+
+        <section class="live-activity glass animate-in" style="animation-delay: 0.3s">
+            <div class="section-header">
+                <h3><i data-lucide="activity"></i> Live Market Analytics</h3>
+                <span class="live-tag">LIVE</span>
+            </div>
+            <div id="activity-log" class="logs">
+                <p>Establishing WebSocket connection...</p>
+                <p>Fetching latest on-chain data...</p>
+            </div>
+        </section>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
